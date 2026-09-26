@@ -24,15 +24,17 @@ public class Ejercicio1 {
         for (int i = 0; i < 10; ) {
             
 
-            do {
-                System.out.println("Ingrese el consumo del sector "+(i+1));
-                sector[i]=teclado.nextByte();
-                if (sector[i]<0) {
-                    System.out.println("Error, vuelve a ingresar el numero");
+          do {
+                System.out.print("Ingrese el consumo del sector " + (i+1) + ": ");
+                sector[i] = teclado.nextByte();
+
+                if (sector[i] < 0) {
+                    System.out.println("El consumo no puede ser negativo");
                 }
 
+            } while (sector[i] < 0);
 
-            } while (sector[i]<0);
+           
     
 
           //suma del total
@@ -50,11 +52,10 @@ public class Ejercicio1 {
         //calcular promedio
         double Promedio = (SumaTotal/10);
         
-        System.out.println(" ");
+    
 
         for (int i = 0; i < cantidad; i++) {
-            System.out.println("");
-            System.out.println("");
+            
             System.out.println("Sector "+(i+1)+" = " +sector[i]);
 
             
@@ -64,17 +65,15 @@ public class Ejercicio1 {
             }
 
         }
+        //mensajes de salida
+        System.out.println("--- RESULTADOS ---");
 
-
-        System.out.println("El sector con mayor consumo es: "+Mayor);
-        System.out.println("promedio :"+Promedio);
-        System.out.println("suma total "+SumaTotal);
-        System.out.println("Cantidad superiores al promedio es: "+cantidadSuperProm);
-
-
-
-
-
+        System.out.println("Consumo total: " + SumaTotal + " m³");
+        System.out.println("Promedio de consumo: " + Promedio + " m³");
+        System.out.println("Sector con mayor consumo: Sector " + PosMay);
+        System.out.println("Mayor consumo: " + Mayor + " m³");
+        System.out.println("Sectores superiores al promedio: " + cantidadSuperProm);
+     
 
 
 
@@ -87,6 +86,9 @@ public class Ejercicio1 {
 
 
 
+        //cerrar teclado
+
+        teclado.close();
 
 
     }
