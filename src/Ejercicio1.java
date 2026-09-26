@@ -21,37 +21,60 @@ public class Ejercicio1 {
        
         //rellenar la matriz
 
-        for (byte i = 0; i < cantidad; i++) {
-            //no pude hacer que muestre mensaje de error al usar valores menores a 0
-            sector[i]=teclado.nextByte();
-            //suma del total
+        for (int i = 0; i < 10; ) {
+            
+
+            do {
+                System.out.println("Ingrese el consumo del sector "+(i+1));
+                sector[i]=teclado.nextByte();
+                if (sector[i]<0) {
+                    System.out.println("Error, vuelve a ingresar el numero");
+                }
+
+
+            } while (sector[i]<0);
+    
+
+          //suma del total
             SumaTotal= SumaTotal+sector[i];
             //posicion y numero mayor
+
             if (sector[i]> Mayor) {
                 Mayor = sector[i];
                 PosMay = (i+1);
             }
 
 
-
+            i++;
         }
         //calcular promedio
-        int Promedio = (SumaTotal/cantidad);
+        double Promedio = (SumaTotal/10);
         
-        
+        System.out.println(" ");
+
+        for (int i = 0; i < cantidad; i++) {
+           
+
+            if (Promedio<sector[i]) {
+              cantidadSuperProm++;
+
+            }
+
+           
+            System.out.println("Sector "+(i+1)+":  "+sector[i]);
 
 
-       for (int i = 0; i < cantidad; i++) {
-        if (Promedio<sector[i]) {
-            cantidadSuperProm++;
+
+            
+
+
+
         }
-       }
-       
-      for (int i = 0; i < sector.length; i++) {
-        System.out.println("Sector "+(i+1)+":  ");
-      }
 
 
+        System.out.println("El sector con mayor consumo es: "+Mayor);
+        System.out.println("promedio :"+Promedio);
+        System.out.println("suma total "+SumaTotal);
 
 
 
