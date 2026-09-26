@@ -54,20 +54,13 @@ public class Ejercicio1 {
 
         for (int i = 0; i < cantidad; i++) {
            
+            System.out.println("Sector "+(i+1)+" = " +sector[i]);
 
+            
             if (Promedio<sector[i]) {
               cantidadSuperProm++;
 
             }
-
-           
-            System.out.println("Sector "+(i+1)+":  "+sector[i]);
-
-
-
-            
-
-
 
         }
 
@@ -75,6 +68,7 @@ public class Ejercicio1 {
         System.out.println("El sector con mayor consumo es: "+Mayor);
         System.out.println("promedio :"+Promedio);
         System.out.println("suma total "+SumaTotal);
+        System.out.println("Cantidad superiores al promedio es: "+cantidadSuperProm);
 
 
 
