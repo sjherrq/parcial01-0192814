@@ -53,7 +53,8 @@ public class Ejercicio1 {
         System.out.println(" ");
 
         for (int i = 0; i < cantidad; i++) {
-           
+            System.out.println("");
+            System.out.println("");
             System.out.println("Sector "+(i+1)+" = " +sector[i]);
 
             
