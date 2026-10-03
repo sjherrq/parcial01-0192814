@@ -5,7 +5,6 @@ public class Cajero {
         int saldo = 100000;
         byte tecla=0;
 
-
         System.out.println("Bienvenido al cajero ATM del Banco Santi");
         System.out.println();
         while (tecla!=4) {
@@ -40,7 +39,6 @@ public class Cajero {
                     break;
 
 
-
                 case 3:
                     System.out.println("--Ingrese cantidad deposito--");
                     deposito = teclado.nextInt();
@@ -65,36 +63,10 @@ public class Cajero {
 
 
 
-
             }
 
-            
-
+    
         }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         teclado.close();
     }
