@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App {
+public class Numeros {
     public static void main(String[] args) throws Exception {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Bienvendio al Software de santi para contar numeros :D");
