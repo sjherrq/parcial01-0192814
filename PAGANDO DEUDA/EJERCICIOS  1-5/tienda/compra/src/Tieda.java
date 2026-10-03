@@ -13,7 +13,7 @@ public class Tieda {
         String mayorprod= "";
         for (int i = 0; i < longitud; i++) {
             System.out.println("Ingresa el nombre del nuevo producto");
-            productos[i]= teclado.next();
+            productos[i]= teclado.nextLine();
             System.out.println("Ingresa el precio del nuevo producto");
             precio[i] = teclado.nextInt();
         }
